@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link,
+.btn-danger,
+.btn-primary {
+    background-color: #0f0f0fd8;
+    border-color: #000;
+}
+
+
+.navbar { font-size: 14px;font-weight: 600;  }
+
+.logo-section .swiper {
+    width: 95%;
+    height: auto;
+}
+
+
+.card {
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Zoom image on hover */
+.card-img-top,
+.card .card-img {
+    transition: all 0.5s ease;
+    object-fit: cover;
+}
+
+.card:hover .card-img-top,
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* Title color change on hover */
+.card-body .card-title {
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-body .card-title {
+    color: #0d6efd;
+    /* Bootstrap primary color or any bright color */
+}
+
+/* Badge subtle wiggle (optional, looks cool on hover) */
+.badge {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover .badge {
+    transform: scale(1.1) rotate(-2deg);
+    background-color: #ffc107;
+    /* Optional - change badge color on hover */
+    color: #000;
+}
+
+.accordion-button {
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.accordion-button::after {
+    background-image: none !important;
+    content: "\2212";
+    transform: none !important;
+    font-weight: bold;
+}
+
+.accordion-button.collapsed::after {
+    content: "\002B";
+    font-weight: bold;
+}
+
+.tabs-section {
+    background-image: url(../img/section-bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.table-section{
+    background-image: url(../img/bg-table.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mySwiper {
+    width: 400px;
+    min-height: 320px;
+  }
+
+.mySwiper  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+
+
+
+
+footer{
+        background: #212429 url(/assets/img/footer-entrance.jpg) no-repeat center center;
+        background-size: cover;
+}
+    
