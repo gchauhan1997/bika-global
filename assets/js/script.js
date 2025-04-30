@@ -21,15 +21,15 @@ var swiper = new Swiper('.logo-swiper', {
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
         },
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 40,
         },
         1280: {
-            slidesPerView: 6,
+            slidesPerView: 4,
             spaceBetween: 50,
         },
     },
@@ -42,4 +42,8 @@ var swiper = new Swiper('.logo-swiper', {
 var myswiper = new Swiper('.mySwiper', {
     effect: 'cards',
     grabCursor: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
 });
