@@ -47,3 +47,10 @@ var myswiper = new Swiper('.mySwiper', {
         disableOnInteraction: true,
     },
 });
+
+// markte page table 
+
+
+
+
+  

@@ -9,9 +9,17 @@ body {
     background-color: #ffffff;
 }
 
-img {max-width:100%}
-a {text-decoration: none;}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link,
+img {
+    max-width: 100%
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
 .btn-danger,
 .btn-primary {
     background-color: #0f0f0fd8;
@@ -19,7 +27,10 @@ a {text-decoration: none;}
 }
 
 
-.navbar { font-size: 14px;font-weight: 600;  }
+.navbar {
+    font-size: 14px;
+    font-weight: 600;
+}
 
 .logo-section .swiper {
     width: 95%;
@@ -103,7 +114,7 @@ a {text-decoration: none;}
     background-repeat: no-repeat;
 }
 
-.table-section{
+.table-section {
     background-image: url(../img/bg-table.png);
     background-position: center center;
     background-size: cover;
@@ -113,9 +124,9 @@ a {text-decoration: none;}
 .mySwiper {
     width: 400px;
     min-height: 320px;
-  }
+}
 
-.mySwiper  .swiper-slide {
+.mySwiper .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,14 +134,39 @@ a {text-decoration: none;}
     font-size: 22px;
     font-weight: bold;
     color: #fff;
-  }
-
-
-
-
-
-footer{
-        background: #212429 url(/assets/img/footer-entrance.jpg) no-repeat center center;
-        background-size: cover;
 }
+
+/* market page */
+.market-page .nav .nav-item button.active {
+    background-color: transparent;
+    color: var(--bs-danger) !important;
+}
+
+.market-page .nav .nav-item button.active::after {
+    content: "";
+    border-bottom: 4px solid var(--bs-danger);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 5px 5px 0 0;
+}
+
+/* market page */
+
+/* login page  */
+.register-page-conatiner .register-left,
+.login-page .login-left{
+    background: url(../img/bg-img.png) no-repeat center center;
+    background-size: cover;
+    background-position: center center;
     
+}
+/* login page  */
+
+
+
+footer {
+    background: #212429 url(/assets/img/footer-entrance.jpg) no-repeat center center;
+    background-size: cover;
+}
