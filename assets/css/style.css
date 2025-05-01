@@ -164,6 +164,11 @@ a {
 }
 /* login page  */
 
+.academy-banner {
+    background: url(../img/academy-bg.png) no-repeat center center;
+    background-size: cover;
+    background-position: center center;
+}
 
 
 footer {
