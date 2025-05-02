@@ -11,7 +11,85 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
+     <!-- bottom navbar cssc -->
+     <style>
+        body { padding-bottom: 48px; }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            z-index: 99999;
+        }
+
+        .nav-box {
+            display: flex;
+            padding: 8px;
+            background-color: #fff;
+            box-shadow: 0px 0px 16px 0px #4444;
+        }
+
+        .nav-container {
+            display: flex;
+            width: 100%;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav__item {
+            display: flex;
+            position: relative;
+            padding: 2px;
+        }
+
+        .nav__item.active .nav__item-icon {
+            margin-top: -26px;
+            box-shadow: 0px 0px 16px 0px #4444;
+
+        }
+
+        .nav__item.active .nav__item-text {
+            transform: scale(1);
+        }
+
+        .nav__item-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #2f3046;
+            text-decoration: none;
+        }
+
+        .nav__item-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6em;
+            background-color: #fff;
+            border-radius: 50%;
+            height: 46px;
+            width: 46px;
+            transition: margin-top 250ms ease-in-out, box-shadow 250ms ease-in-out;
+            color: #000;
+        }
+
+        .nav__item-text {
+            position: absolute;
+            bottom: 0;
+            transform: scale(0);
+            transition: transform 250ms ease-in-out;
+            white-space: nowrap;
+            font-weight: 600;
+            font-size: 14px;
+            color: #000;
+        }
+    </style>
+     <style>
         .crypto-item {
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -35,16 +113,19 @@
     </style>
 </head>
 
-<body>
-    <!-- header -->
+<body class="mobile-body">
+    <!-- header mobile-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow py-lg-3 sticky-top">
         <div class="container-xl">
-            <a class="navbar-brand fw-bold" href="index.html">Bika Global</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand fw-bold" href="index-mobile.html">Bika Global</a>
+            <div class="mobile-btn">
+                <div class="btn btn-dark btn-sm me-2">Connect</div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -60,7 +141,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="features.html">FX</a></li>
-                           
+
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -1183,7 +1264,6 @@
             </div>
           </div>
        </section>
-
         <!-- register  -->
         <div class="mt-lg-5 my-3 bg-light">
             <div class="position-relative py-5">
@@ -1210,78 +1290,62 @@
         <!-- register  -->
     </main>
 
-    <!-- footer -->
-    <footer class="footer bg-dark text-white py-3 py-lg-5">
-        <div class="container-xl">
-            <div class="row">
-                <div class="col-sm-6 col-md-4 mt-4 col-lg-3 text-center text-sm-start">
-                    <div class="information">
-                        <h6 class="footer-heading text-uppercase text-white fw-bold">Information</h6>
-                        <ul class="list-unstyled footer-link mt-4">
-                            <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">Events</a></li>
-                            <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">Our Team</a></li>
-                            <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">Upcoming Sale</a></li>
-                            <li class=""><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">New Launches</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 mt-4 col-lg-3 text-center text-sm-start">
-                    <div class="resources">
-                        <h6 class="footer-heading text-uppercase text-white fw-bold">Resources</h6>
-                        <ul class="list-unstyled footer-link mt-4">
-                            <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">API</a></li>
-                            <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">Website Tutorials</a></li>
-                            <li class="mb-1"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">Third Party</a></li>
-                            <li class=""><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white text-decoration-none fw-semibold">Video Lectures</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 mt-4 col-lg-2 text-center text-sm-start">
-                    <div class="social">
-                        <h6 class="footer-heading text-uppercase text-white fw-bold">Social</h6>
-                        <ul class="list-inline my-4">
-                            <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white btn-sm btn btn-primary mb-2"><i class="bi bi-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-danger btn-sm btn btn-light mb-2"><i class="bi bi-instagram"></i></a>
-                            </li>
-                            <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white btn-sm btn btn-primary mb-2"><i class="bi bi-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item"><a href="https://codepen.io/Gaurav-Rana-the-reactor"
-                                    class="text-white btn-sm btn btn-success mb-2"><i class="bi bi-whatsapp"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-6 col-md-4 col-lg-3 mt-4 col-lg-4 text-center text-sm-start">
-                    <div class="contact">
-                        <h6 class="footer-heading text-uppercase text-white fw-bold">Contact Us</h6>
-                        <address class="mt-4 m-0 text-white mb-1"><i class="bi bi-pin-map fw-semibold"></i> New South
-                            Block , Phase 8B , 160055</address>
-                        <a href="tel:+" class="text-white mb-1 text-decoration-none d-block fw-semibold"><i
-                                class="bi bi-telephone"></i> 909090XXXX</a>
-                        <a href="mailto:" class="text-white mb-1 text-decoration-none d-block fw-semibold"><i
-                                class="bi bi-envelope"></i> xyzdemomail@gmail.com</a>
-                        <a href="" class="text-white text-decoration-none fw-semibold"><i class="bi bi-skype"></i>
-                            xyzdemomail</a>
-                    </div>
-                </div>
-            </div>
+    <!-- bottom navbar -->
+    <nav class="bottom-nav">
+        <div class="nav-box">
+            <ul class="nav-container">
+                <li class="nav__item ">
+                    <a href="index-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-house-door-fill"></i>
+                        </div>
+                        <span class="nav__item-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav__item active">
+                    <a href="market-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+                        <span class="nav__item-text">Market</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="features-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-pie-chart-fill"></i>
+                        </div>
+                        <span class="nav__item-text">Trade</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="news-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-newspaper"></i>
+                        </div>
+                        <span class="nav__item-text">News</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Settings" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-bank2"></i>
+                        </div>
+                        <span class="nav__item-text">Finance</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Settings" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <span class="nav__item-text">Assets</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="text-center text-white mt-4 p-1">
-            <p class="mb-0 fw-bold">2025 © Yodan, All Rights Reserved</p>
-        </div>
-    </footer>
+    </nav>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"

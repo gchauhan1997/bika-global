@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Features Bika Global</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .nav-tabs .nav-link {
+            border: none;
+            color: #000;
+        }
+
+        .nav-tabs .nav-link.active {
+            border-bottom: 2px solid #000 !important; /* Example active tab underline */
+            font-weight: 600;
+        }
+       
+    </style>
+     <!-- bottom navbar cssc -->
+     <style>
+        body { padding-bottom: 48px; }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            z-index: 99999;
+        }
+
+        .nav-box {
+            display: flex;
+            padding: 8px;
+            background-color: #fff;
+            box-shadow: 0px 0px 16px 0px #4444;
+        }
+
+        .nav-container {
+            display: flex;
+            width: 100%;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav__item {
+            display: flex;
+            position: relative;
+            padding: 2px;
+        }
+
+        .nav__item.active .nav__item-icon {
+            margin-top: -26px;
+            box-shadow: 0px 0px 16px 0px #4444;
+
+        }
+
+        .nav__item.active .nav__item-text {
+            transform: scale(1);
+        }
+
+        .nav__item-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #2f3046;
+            text-decoration: none;
+        }
+
+        .nav__item-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6em;
+            background-color: #fff;
+            border-radius: 50%;
+            height: 46px;
+            width: 46px;
+            transition: margin-top 250ms ease-in-out, box-shadow 250ms ease-in-out;
+            color: #000;
+        }
+
+        .nav__item-text {
+            position: absolute;
+            bottom: 0;
+            transform: scale(0);
+            transition: transform 250ms ease-in-out;
+            white-space: nowrap;
+            font-weight: 600;
+            font-size: 14px;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body class="mobile-body">
+    <!-- header mobile-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow py-lg-3 sticky-top">
+        <div class="container-xl">
+            <a class="navbar-brand fw-bold" href="index-mobile.html">Bika Global</a>
+            <div class="mobile-btn">
+                <div class="btn btn-dark btn-sm me-2">Connect</div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="market.html">Markets</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Futures
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="features.html">FX</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Finance
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Loan</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ICO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">C2C</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academy.html">Beginner Academy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live streaming</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav right-side">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-translate"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">EN</a></li>
+                            <li><a class="dropdown-item" href="#">Korean</a></li>
+
+                            <li><a class="dropdown-item" href="#">US EN</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- header -->
+
+    <main>
+       <section>
+            <div class="container-fluid py-3 text-center">
+
+                <!-- chart section -->
+                 <div class="row my-3 my-lg-5">
+                    <!--chart  -->
+                    <div class="col-lg-9">
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <div class="tradingview-widget-container">
+                          <div id="tradingview_17f8f"></div>
+                          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+                          </div>
+                          <script>
+                          
+                            new TradingView.widget(
+                            {
+                            "width": 320,
+                            "height": 240,
+                            "symbol": "NASDAQ:AAPL",
+                            "interval": "D",
+                            "timezone": "Etc/UTC",
+                            "theme": "Light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_17f8f"
+                            }
+                            );
+                           
+                          </script>
+                    </div>
+                    <!-- chart -->
+                    <div class="col-lg-3">
+                        <div style="font-size: 12px;" class="w-100">
+                            <ul class="nav nav-tabs mb-3" id="contractTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="second-contract-tab" data-bs-toggle="tab" data-bs-target="#second-contract" type="button" role="tab" aria-controls="second-contract" aria-selected="true">Second contract</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="perpetual-contract-tab" data-bs-toggle="tab" data-bs-target="#perpetual-contract" type="button" role="tab" aria-controls="perpetual-contract" aria-selected="false">Perpetual contract</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="contractTabsContent">
+                                <div class="tab-pane fade show active" id="second-contract" role="tabpanel" aria-labelledby="second-contract-tab">
+                                    <ul class="nav nav-pills nav-justified mb-3" id="tradeOptions" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="trade-now-tab" data-bs-toggle="pill" data-bs-target="#trade-now" type="button" role="tab" aria-controls="trade-now" aria-selected="true">Trade now</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="scheduled-trade-tab" data-bs-toggle="pill" data-bs-target="#scheduled-trade" type="button" role="tab" aria-controls="scheduled-trade" aria-selected="false">Scheduled trade</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="tradeOptionsContent">
+                                        <div class="tab-pane fade show active" id="trade-now" role="tabpanel" aria-labelledby="trade-now-tab">
+                                            <div class="bg-light p-3 border rounded">
+                                                <p class="mb-2">Balance <span class="fw-bold">0 USDT</span></p>
+                                                <div class="btn-group mb-3 toggle-button-group" role="group" aria-label="Long or Short">
+                                                    <input type="radio" class="btn-check" name="tradeTypeSecondNow" id="longSecondNow" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-success" for="longSecondNow">Long</label>
+                                                    <input type="radio" class="btn-check" name="tradeTypeSecondNow" id="shortSecondNow" autocomplete="off">
+                                                    <label class="btn btn-outline-danger" for="shortSecondNow">Short</label>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="intervalSecondNow" class="form-label small text-muted">Interval</label>
+                                                    <select class="form-select form-select-sm" id="intervalSecondNow">
+                                                        <option selected>10s-8%</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="amountSecondNow" class="form-label small text-muted">Amount</label>
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="number" class="form-control" id="amountSecondNow" value="0">
+                                                        <span class="input-group-text">USDT</span>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="small text-success">Call |> 0.95% <span class="text-muted">( *1 )</span></p>
+                                                </div>
+                                                <button class="btn btn-dark w-100">Login or Registered</button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="scheduled-trade" role="tabpanel" aria-labelledby="scheduled-trade-tab">
+                                            <div class="bg-light p-3 border rounded">
+                                                <div class="btn-group mb-3 toggle-button-group" role="group" aria-label="Long or Short">
+                                                    <input type="radio" class="btn-check" name="tradeTypeSpecific" id="longSpecific" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-success" for="longSpecific">Long</label>
+                                                    <input type="radio" class="btn-check" name="tradeTypeSpecific" id="shortSpecific" autocomplete="off">
+                                                    <label class="btn btn-outline-danger" for="shortSpecific">Short</label>
+                                                </div>
+                                            
+                                                <div class="mb-3">
+                                                    <label for="timeSelection" class="form-label small text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l4.5 3a.5.5 0 0 0 .404-.868L8.5 9V3.5a.5.5 0 0 0-1 0z"/>
+                                                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8a7 7 0 1 1-14 0a7 7 0 0 1 14 0z"/>
+                                                        </svg> Click to select time</label>
+                                                    <input type="datetime-local" class="form-control form-control-sm" id="timeSelection" placeholder="Click to select time">
+                                                </div>
+                                            
+                                                <div class="mb-3">
+                                                    <label for="intervalSpecific" class="form-label small text-muted">Interval</label>
+                                                    <select class="form-select form-select-sm" id="intervalSpecific">
+                                                        <option selected>10s-8%</option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                </div>
+                                            
+                                                <div class="mb-3">
+                                                    <label for="amountSpecific" class="form-label small text-muted">Amount</label>
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="number" class="form-control" id="amountSpecific" value="0">
+                                                        <span class="input-group-text">USDT</span>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="mb-3">
+                                                    <p class="small text-success">Call |> 0.95% <span class="text-muted">( *1 )</span></p>
+                                                </div>
+                                            
+                                                <button class="btn btn-dark w-100">Login or Registered</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="perpetual-contract" role="tabpanel" aria-labelledby="perpetual-contract-tab">
+                                    <div class="bg-light p-3 border rounded">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <label for="leverageSlider" class="form-label small text-muted mb-0">Times</label>
+                                            <div class="d-flex align-items-center">
+                                                <input type="text" value="50" class="form-control form-control-sm me-2" id="leverageInput">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary p-0 rounded-circle" style="width: 20px; height: 20px; line-height: 1;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854z"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="range" class="form-range" id="leverageSlider" min="1" max="100" step="24" value="50">
+                                            <div class="d-flex justify-content-between small text-muted">
+                                                <span>1x</span>
+                                                <span>25x</span>
+                                                <span>50x</span>
+                                                <span>75x</span>
+                                                <span>100x</span>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary me-2 active">Market</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Limit</button>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="mb-3">
+                                            <label for="priceInput" class="form-label small text-muted">Price</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control" id="priceInput" placeholder="Market">
+                                                <span class="input-group-text">USD</span>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="mb-3">
+                                            <label for="amountInput" class="form-label small text-muted">Amount</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="number" class="form-control" id="amountInput" value="0">
+                                                <span class="input-group-text">USDT</span>
+                                            </div>
+                                        </div>
+                                    
+                                        <p class="small text-muted mb-2">Minimum 500</p>
+                                    
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="tpSlSwitch">
+                                            <label class="form-check-label small text-muted" for="tpSlSwitch">TP/SL</label>
+                                        </div>
+                                    
+                                        <div class="mb-3">
+                                            <label for="tpInput" class="form-label small text-muted">TP</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="number" class="form-control" id="tpInput" value="0" disabled>
+                                                <span class="input-group-text">XAU/USD</span>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="mb-3">
+                                            <label for="slInput" class="form-label small text-muted">SL</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="number" class="form-control" id="slInput" value="0" disabled>
+                                                <span class="input-group-text">XAU/USD</span>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="mb-3">
+                                            <label for="volumeInput" class="form-label small text-muted">Volume</label>
+                                            <div class="input-group input-group-sm">
+                                                <input type="number" class="form-control" id="volumeInput" value="0">
+                                                <span class="input-group-text">USDT</span>
+                                            </div>
+                                        </div>
+                                    
+                                        <p class="small text-muted mb-1">Balance 0 USDT</p>
+                                        <p class="small text-muted">Available ≈ 0 USDT <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.387 1.132.485a.883.883 0 0 0 .995.082l.5-.139.086-.234z"/>
+                                                <path d="M8 9.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                            </svg>
+                                        </p>
+                                        <button class="btn btn-dark w-100 mt-2">Login or Registered</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+                 <!--history details  -->
+                 <div class="my-4 mb-5 w-100">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="open-position-tab" data-bs-toggle="tab" data-bs-target="#openPosition" type="button" role="tab" aria-controls="openPosition" aria-selected="false">Open Position</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="current-position-tab" data-bs-toggle="tab" data-bs-target="#currentPosition" type="button" role="tab" aria-controls="currentPosition" aria-selected="true">Current Position</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="transaction-history-tab" data-bs-toggle="tab" data-bs-target="#transactionHistory" type="button" role="tab" aria-controls="transactionHistory" aria-selected="false">Transaction History</button>
+                        </li>
+                        <li class="nav-item ms-auto d-flex align-items-center">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="hideZeroValue">
+                                <label class="form-check-label small text-muted" for="hideZeroValue">Hide zero value</label>
+                            </div>
+                        </li>
+                    </ul>
+            
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="currentPosition" role="tabpanel" aria-labelledby="current-position-tab">
+                            <div class="table-responsive">
+                                <table  class="table table-sm table-hover table-bordered table-striped ">
+                                    <thead>
+                                        <tr class="text-nowrap" style="font-weight: 500 !important; font-size: 12px;">
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Trading pair</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Direction</th>
+                                            <th scope="col">Multiplier</th>
+                                            <th scope="col">Entry price</th>
+                                            <th scope="col">Current price</th>
+                                            <th scope="col">Liquidation price</th>
+                                            <th scope="col">Margin</th>
+                                            <th scope="col">Margin ratio</th>
+                                            <th scope="col">Fees</th>
+                                            <th scope="col">TP/SL</th>
+                                            <th scope="col">Rate of Return (ROE)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="13" class="text-center text-muted">No records</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="openPosition" role="tabpanel" aria-labelledby="open-position-tab">
+                            <p class="text-center text-muted">Content for Open Position will go here.</p>
+                        </div>
+                        <div class="tab-pane fade" id="transactionHistory" role="tabpanel" aria-labelledby="transaction-history-tab">
+                            <p class="text-center text-muted">Content for Transaction History will go here.</p>
+                        </div>
+                    </div>
+                </div>
+                 <!--history details  -->
+                
+            </div>
+       </section>
+    </main>
+
+    <!-- bottom navbar -->
+    <nav class="bottom-nav">
+        <div class="nav-box">
+            <ul class="nav-container">
+                <li class="nav__item ">
+                    <a href="index-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-house-door-fill"></i>
+                        </div>
+                        <span class="nav__item-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav__item ">
+                    <a href="market-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+                        <span class="nav__item-text">Market</span>
+                    </a>
+                </li>
+                <li class="nav__item active">
+                    <a href="features-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-pie-chart-fill"></i>
+                        </div>
+                        <span class="nav__item-text">Trade</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="news-mobile.html" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-newspaper"></i>
+                        </div>
+                        <span class="nav__item-text">News</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Settings" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-bank2"></i>
+                        </div>
+                        <span class="nav__item-text">Finance</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Settings" class="nav__item-link">
+                        <div class="nav__item-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <span class="nav__item-text">Assets</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
