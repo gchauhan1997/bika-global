@@ -48,8 +48,51 @@ var myswiper = new Swiper('.mySwiper', {
     },
 });
 
-// markte page table 
+// for mobile banner slider
+var swiper = new Swiper('.mobile-banner-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: true,
+    },
+});
 
+// for mobile vertical slider
+const swiperVertical = new Swiper('.swiper-container-vertical', {
+    direction: 'vertical',
+    slidesPerView: '3', // Enable auto height
+    freeMode: true, // Enable free scrolling
+    speed: 2800, 
+    loop: true,
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    //     draggable: true,
+    // },
+     autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        },
+    mousewheel: true, // Enable mousewheel scrolling
+    reverseDirection: true, // Scroll from bottom to top
+});
+
+// bottom navbar
+document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav__item');
+  
+    navItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        navItems.forEach(function(navItem) {
+          navItem.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  });
 
 
 
