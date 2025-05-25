@@ -33,10 +33,10 @@ var swiper = new Swiper('.logo-swiper', {
             spaceBetween: 50,
         },
     },
-  });
+});
 
 // animation
-  AOS.init();
+AOS.init();
 
 //   new
 var myswiper = new Swiper('.mySwiper', {
@@ -50,7 +50,6 @@ var myswiper = new Swiper('.mySwiper', {
 
 // for mobile banner slider
 var swiper = new Swiper('.mobile-banner-slider', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
@@ -59,41 +58,58 @@ var swiper = new Swiper('.mobile-banner-slider', {
         delay: 1500,
         disableOnInteraction: true,
     },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 });
+
 
 // for mobile vertical slider
 const swiperVertical = new Swiper('.swiper-container-vertical', {
     direction: 'vertical',
     slidesPerView: '3', // Enable auto height
     freeMode: true, // Enable free scrolling
-    speed: 2800, 
+    speed: 2800,
     loop: true,
     // scrollbar: {
     //     el: '.swiper-scrollbar',
     //     draggable: true,
     // },
-     autoplay: {
+    autoplay: {
         delay: 0,
         disableOnInteraction: false,
-        },
+    },
     mousewheel: true, // Enable mousewheel scrolling
     reverseDirection: true, // Scroll from bottom to top
 });
 
 // bottom navbar
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navItems = document.querySelectorAll('.nav__item');
-  
-    navItems.forEach(function(item) {
-      item.addEventListener('click', function() {
-        navItems.forEach(function(navItem) {
-          navItem.classList.remove('active');
+
+    navItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            navItems.forEach(function (navItem) {
+                navItem.classList.remove('sub_active');
+            });
+            this.classList.add('active');
         });
-        this.classList.add('active');
-      });
     });
-  });
+});
 
 
 
-  
+
+
+
+
+
+// add class on scroll
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+        document.body.classList.add("scrolled");
+    } else {
+        document.body.classList.remove("scrolled");
+    }
+});

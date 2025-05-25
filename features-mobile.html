@@ -19,14 +19,17 @@
         }
 
         .nav-tabs .nav-link.active {
-            border-bottom: 2px solid #000 !important; /* Example active tab underline */
+            border-bottom: 2px solid #000 !important;
+            /* Example active tab underline */
             font-weight: 600;
         }
-       
     </style>
-     <!-- bottom navbar cssc -->
-     <style>
-        body { padding-bottom: 48px; }
+    <!-- bottom navbar cssc -->
+    <style>
+        body {
+            padding-bottom: 48px;
+        }
+
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -118,7 +121,7 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               
+
                 <div class="navbar-nav right-side my-2">
                     <div class="d-flex gap-2">
                         <li class="nav-item mb-2 w-100">
@@ -147,72 +150,92 @@
     <!-- header -->
 
     <main>
-       <section>
+        <section>
             <div class="container-fluid py-3 text-center">
 
                 <!-- chart section -->
-                 <div class="row my-3 my-lg-5">
+                <div class="row my-3 my-lg-5">
                     <!--chart  -->
                     <div class="col-lg-9">
                         <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                         <div class="tradingview-widget-container">
-                          <div id="tradingview_17f8f"></div>
-                          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
-                          </div>
-                          <script>
-                          
+                            <div id="tradingview_17f8f"></div>
+                            <div class="tradingview-widget-copyright"><a
+                                    href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener"
+                                    target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+                        </div>
+                        <script>
+
                             new TradingView.widget(
-                            {
-                            "width": 320,
-                            "height": 240,
-                            "symbol": "NASDAQ:AAPL",
-                            "interval": "D",
-                            "timezone": "Etc/UTC",
-                            "theme": "Light",
-                            "style": "1",
-                            "locale": "en",
-                            "toolbar_bg": "#f1f3f6",
-                            "enable_publishing": false,
-                            "allow_symbol_change": true,
-                            "container_id": "tradingview_17f8f"
-                            }
+                                {
+                                    "width": 320,
+                                    "height": 240,
+                                    "symbol": "NASDAQ:AAPL",
+                                    "interval": "D",
+                                    "timezone": "Etc/UTC",
+                                    "theme": "Light",
+                                    "style": "1",
+                                    "locale": "en",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "enable_publishing": false,
+                                    "allow_symbol_change": true,
+                                    "container_id": "tradingview_17f8f"
+                                }
                             );
-                           
-                          </script>
+
+                        </script>
                     </div>
                     <!-- chart -->
                     <div class="col-lg-3">
                         <div style="font-size: 12px;" class="w-100">
                             <ul class="nav nav-tabs mb-3" id="contractTabs" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="second-contract-tab" data-bs-toggle="tab" data-bs-target="#second-contract" type="button" role="tab" aria-controls="second-contract" aria-selected="true">Second contract</button>
+                                    <button class="nav-link active" id="second-contract-tab" data-bs-toggle="tab"
+                                        data-bs-target="#second-contract" type="button" role="tab"
+                                        aria-controls="second-contract" aria-selected="true">Second contract</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="perpetual-contract-tab" data-bs-toggle="tab" data-bs-target="#perpetual-contract" type="button" role="tab" aria-controls="perpetual-contract" aria-selected="false">Perpetual contract</button>
+                                    <button class="nav-link" id="perpetual-contract-tab" data-bs-toggle="tab"
+                                        data-bs-target="#perpetual-contract" type="button" role="tab"
+                                        aria-controls="perpetual-contract" aria-selected="false">Perpetual
+                                        contract</button>
                                 </li>
                             </ul>
                             <div class="tab-content" id="contractTabsContent">
-                                <div class="tab-pane fade show active" id="second-contract" role="tabpanel" aria-labelledby="second-contract-tab">
+                                <div class="tab-pane fade show active" id="second-contract" role="tabpanel"
+                                    aria-labelledby="second-contract-tab">
                                     <ul class="nav nav-pills nav-justified mb-3" id="tradeOptions" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="trade-now-tab" data-bs-toggle="pill" data-bs-target="#trade-now" type="button" role="tab" aria-controls="trade-now" aria-selected="true">Trade now</button>
+                                            <button class="nav-link active" id="trade-now-tab" data-bs-toggle="pill"
+                                                data-bs-target="#trade-now" type="button" role="tab"
+                                                aria-controls="trade-now" aria-selected="true">Trade now</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="scheduled-trade-tab" data-bs-toggle="pill" data-bs-target="#scheduled-trade" type="button" role="tab" aria-controls="scheduled-trade" aria-selected="false">Scheduled trade</button>
+                                            <button class="nav-link" id="scheduled-trade-tab" data-bs-toggle="pill"
+                                                data-bs-target="#scheduled-trade" type="button" role="tab"
+                                                aria-controls="scheduled-trade" aria-selected="false">Scheduled
+                                                trade</button>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="tradeOptionsContent">
-                                        <div class="tab-pane fade show active" id="trade-now" role="tabpanel" aria-labelledby="trade-now-tab">
+                                        <div class="tab-pane fade show active" id="trade-now" role="tabpanel"
+                                            aria-labelledby="trade-now-tab">
                                             <div class="bg-light p-3 border rounded">
                                                 <p class="mb-2">Balance <span class="fw-bold">0 USDT</span></p>
-                                                <div class="btn-group mb-3 toggle-button-group" role="group" aria-label="Long or Short">
-                                                    <input type="radio" class="btn-check" name="tradeTypeSecondNow" id="longSecondNow" autocomplete="off" checked>
-                                                    <label class="btn btn-outline-success" for="longSecondNow">Long</label>
-                                                    <input type="radio" class="btn-check" name="tradeTypeSecondNow" id="shortSecondNow" autocomplete="off">
-                                                    <label class="btn btn-outline-danger" for="shortSecondNow">Short</label>
+                                                <div class="btn-group mb-3 toggle-button-group" role="group"
+                                                    aria-label="Long or Short">
+                                                    <input type="radio" class="btn-check" name="tradeTypeSecondNow"
+                                                        id="longSecondNow" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-success"
+                                                        for="longSecondNow">Long</label>
+                                                    <input type="radio" class="btn-check" name="tradeTypeSecondNow"
+                                                        id="shortSecondNow" autocomplete="off">
+                                                    <label class="btn btn-outline-danger"
+                                                        for="shortSecondNow">Short</label>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="intervalSecondNow" class="form-label small text-muted">Interval</label>
+                                                    <label for="intervalSecondNow"
+                                                        class="form-label small text-muted">Interval</label>
                                                     <select class="form-select form-select-sm" id="intervalSecondNow">
                                                         <option selected>10s-8%</option>
                                                         <option value="1">Option 1</option>
@@ -221,37 +244,52 @@
                                                     </select>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="amountSecondNow" class="form-label small text-muted">Amount</label>
+                                                    <label for="amountSecondNow"
+                                                        class="form-label small text-muted">Amount</label>
                                                     <div class="input-group input-group-sm">
-                                                        <input type="number" class="form-control" id="amountSecondNow" value="0">
+                                                        <input type="number" class="form-control" id="amountSecondNow"
+                                                            value="0">
                                                         <span class="input-group-text">USDT</span>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <p class="small text-success">Call |> 0.95% <span class="text-muted">( *1 )</span></p>
+                                                    <p class="small text-success">Call |> 0.95% <span
+                                                            class="text-muted">( *1 )</span></p>
                                                 </div>
                                                 <button class="btn btn-dark w-100">Login or Registered</button>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="scheduled-trade" role="tabpanel" aria-labelledby="scheduled-trade-tab">
+                                        <div class="tab-pane fade" id="scheduled-trade" role="tabpanel"
+                                            aria-labelledby="scheduled-trade-tab">
                                             <div class="bg-light p-3 border rounded">
-                                                <div class="btn-group mb-3 toggle-button-group" role="group" aria-label="Long or Short">
-                                                    <input type="radio" class="btn-check" name="tradeTypeSpecific" id="longSpecific" autocomplete="off" checked>
-                                                    <label class="btn btn-outline-success" for="longSpecific">Long</label>
-                                                    <input type="radio" class="btn-check" name="tradeTypeSpecific" id="shortSpecific" autocomplete="off">
-                                                    <label class="btn btn-outline-danger" for="shortSpecific">Short</label>
+                                                <div class="btn-group mb-3 toggle-button-group" role="group"
+                                                    aria-label="Long or Short">
+                                                    <input type="radio" class="btn-check" name="tradeTypeSpecific"
+                                                        id="longSpecific" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-success"
+                                                        for="longSpecific">Long</label>
+                                                    <input type="radio" class="btn-check" name="tradeTypeSpecific"
+                                                        id="shortSpecific" autocomplete="off">
+                                                    <label class="btn btn-outline-danger"
+                                                        for="shortSpecific">Short</label>
                                                 </div>
-                                            
+
                                                 <div class="mb-3">
-                                                    <label for="timeSelection" class="form-label small text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                                                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l4.5 3a.5.5 0 0 0 .404-.868L8.5 9V3.5a.5.5 0 0 0-1 0z"/>
-                                                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8a7 7 0 1 1-14 0a7 7 0 0 1 14 0z"/>
+                                                    <label for="timeSelection" class="form-label small text-muted"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l4.5 3a.5.5 0 0 0 .404-.868L8.5 9V3.5a.5.5 0 0 0-1 0z" />
+                                                            <path
+                                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8a7 7 0 1 1-14 0a7 7 0 0 1 14 0z" />
                                                         </svg> Click to select time</label>
-                                                    <input type="datetime-local" class="form-control form-control-sm" id="timeSelection" placeholder="Click to select time">
+                                                    <input type="datetime-local" class="form-control form-control-sm"
+                                                        id="timeSelection" placeholder="Click to select time">
                                                 </div>
-                                            
+
                                                 <div class="mb-3">
-                                                    <label for="intervalSpecific" class="form-label small text-muted">Interval</label>
+                                                    <label for="intervalSpecific"
+                                                        class="form-label small text-muted">Interval</label>
                                                     <select class="form-select form-select-sm" id="intervalSpecific">
                                                         <option selected>10s-8%</option>
                                                         <option value="1">Option 1</option>
@@ -259,39 +297,50 @@
                                                         <option value="3">Option 3</option>
                                                     </select>
                                                 </div>
-                                            
+
                                                 <div class="mb-3">
-                                                    <label for="amountSpecific" class="form-label small text-muted">Amount</label>
+                                                    <label for="amountSpecific"
+                                                        class="form-label small text-muted">Amount</label>
                                                     <div class="input-group input-group-sm">
-                                                        <input type="number" class="form-control" id="amountSpecific" value="0">
+                                                        <input type="number" class="form-control" id="amountSpecific"
+                                                            value="0">
                                                         <span class="input-group-text">USDT</span>
                                                     </div>
                                                 </div>
-                                            
+
                                                 <div class="mb-3">
-                                                    <p class="small text-success">Call |> 0.95% <span class="text-muted">( *1 )</span></p>
+                                                    <p class="small text-success">Call |> 0.95% <span
+                                                            class="text-muted">( *1 )</span></p>
                                                 </div>
-                                            
+
                                                 <button class="btn btn-dark w-100">Login or Registered</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="perpetual-contract" role="tabpanel" aria-labelledby="perpetual-contract-tab">
+                                <div class="tab-pane fade" id="perpetual-contract" role="tabpanel"
+                                    aria-labelledby="perpetual-contract-tab">
                                     <div class="bg-light p-3 border rounded">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <label for="leverageSlider" class="form-label small text-muted mb-0">Times</label>
+                                            <label for="leverageSlider"
+                                                class="form-label small text-muted mb-0">Times</label>
                                             <div class="d-flex align-items-center">
-                                                <input type="text" value="50" class="form-control form-control-sm me-2" id="leverageInput">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary p-0 rounded-circle" style="width: 20px; height: 20px; line-height: 1;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854z"/>
+                                                <input type="text" value="50" class="form-control form-control-sm me-2"
+                                                    id="leverageInput">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary p-0 rounded-circle"
+                                                    style="width: 20px; height: 20px; line-height: 1;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854z" />
                                                     </svg>
                                                 </button>
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <input type="range" class="form-range" id="leverageSlider" min="1" max="100" step="24" value="50">
+                                            <input type="range" class="form-range" id="leverageSlider" min="1" max="100"
+                                                step="24" value="50">
                                             <div class="d-flex justify-content-between small text-muted">
                                                 <span>1x</span>
                                                 <span>25x</span>
@@ -300,22 +349,25 @@
                                                 <span>100x</span>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="mb-2">
                                             <div class="d-flex align-items-center">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary me-2 active">Market</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Limit</button>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary me-2 active">Market</button>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary">Limit</button>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="mb-3">
                                             <label for="priceInput" class="form-label small text-muted">Price</label>
                                             <div class="input-group input-group-sm">
-                                                <input type="text" class="form-control" id="priceInput" placeholder="Market">
+                                                <input type="text" class="form-control" id="priceInput"
+                                                    placeholder="Market">
                                                 <span class="input-group-text">USD</span>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="mb-3">
                                             <label for="amountInput" class="form-label small text-muted">Amount</label>
                                             <div class="input-group input-group-sm">
@@ -323,30 +375,34 @@
                                                 <span class="input-group-text">USDT</span>
                                             </div>
                                         </div>
-                                    
+
                                         <p class="small text-muted mb-2">Minimum 500</p>
-                                    
+
                                         <div class="form-check form-switch mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch" id="tpSlSwitch">
-                                            <label class="form-check-label small text-muted" for="tpSlSwitch">TP/SL</label>
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="tpSlSwitch">
+                                            <label class="form-check-label small text-muted"
+                                                for="tpSlSwitch">TP/SL</label>
                                         </div>
-                                    
+
                                         <div class="mb-3">
                                             <label for="tpInput" class="form-label small text-muted">TP</label>
                                             <div class="input-group input-group-sm">
-                                                <input type="number" class="form-control" id="tpInput" value="0" disabled>
+                                                <input type="number" class="form-control" id="tpInput" value="0"
+                                                    disabled>
                                                 <span class="input-group-text">XAU/USD</span>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="mb-3">
                                             <label for="slInput" class="form-label small text-muted">SL</label>
                                             <div class="input-group input-group-sm">
-                                                <input type="number" class="form-control" id="slInput" value="0" disabled>
+                                                <input type="number" class="form-control" id="slInput" value="0"
+                                                    disabled>
                                                 <span class="input-group-text">XAU/USD</span>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="mb-3">
                                             <label for="volumeInput" class="form-label small text-muted">Volume</label>
                                             <div class="input-group input-group-sm">
@@ -354,12 +410,16 @@
                                                 <span class="input-group-text">USDT</span>
                                             </div>
                                         </div>
-                                    
+
                                         <p class="small text-muted mb-1">Balance 0 USDT</p>
-                                        <p class="small text-muted">Available ≈ 0 USDT <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                                <path d="m8.93 6.588-2.29.287-.082.387 1.132.485a.883.883 0 0 0 .995.082l.5-.139.086-.234z"/>
-                                                <path d="M8 9.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                        <p class="small text-muted">Available ≈ 0 USDT <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path
+                                                    d="m8.93 6.588-2.29.287-.082.387 1.132.485a.883.883 0 0 0 .995.082l.5-.139.086-.234z" />
+                                                <path d="M8 9.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
                                             </svg>
                                         </p>
                                         <button class="btn btn-dark w-100 mt-2">Login or Registered</button>
@@ -368,32 +428,40 @@
                             </div>
                         </div>
                     </div>
-                 </div>
+                </div>
 
-                 <!--history details  -->
-                 <div class="my-4 mb-5 w-100">
+                <!--history details  -->
+                <div class="my-4 mb-5 w-100">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="open-position-tab" data-bs-toggle="tab" data-bs-target="#openPosition" type="button" role="tab" aria-controls="openPosition" aria-selected="false">Open Position</button>
+                            <button class="nav-link" id="open-position-tab" data-bs-toggle="tab"
+                                data-bs-target="#openPosition" type="button" role="tab" aria-controls="openPosition"
+                                aria-selected="false">Open Position</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="current-position-tab" data-bs-toggle="tab" data-bs-target="#currentPosition" type="button" role="tab" aria-controls="currentPosition" aria-selected="true">Current Position</button>
+                            <button class="nav-link active" id="current-position-tab" data-bs-toggle="tab"
+                                data-bs-target="#currentPosition" type="button" role="tab"
+                                aria-controls="currentPosition" aria-selected="true">Current Position</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="transaction-history-tab" data-bs-toggle="tab" data-bs-target="#transactionHistory" type="button" role="tab" aria-controls="transactionHistory" aria-selected="false">Transaction History</button>
+                            <button class="nav-link" id="transaction-history-tab" data-bs-toggle="tab"
+                                data-bs-target="#transactionHistory" type="button" role="tab"
+                                aria-controls="transactionHistory" aria-selected="false">Transaction History</button>
                         </li>
                         <li class="nav-item ms-auto d-flex align-items-center">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch" id="hideZeroValue">
-                                <label class="form-check-label small text-muted" for="hideZeroValue">Hide zero value</label>
+                                <label class="form-check-label small text-muted" for="hideZeroValue">Hide zero
+                                    value</label>
                             </div>
                         </li>
                     </ul>
-            
+
                     <div class="tab-content mt-3" id="myTabContent">
-                        <div class="tab-pane fade show active" id="currentPosition" role="tabpanel" aria-labelledby="current-position-tab">
+                        <div class="tab-pane fade show active" id="currentPosition" role="tabpanel"
+                            aria-labelledby="current-position-tab">
                             <div class="table-responsive">
-                                <table  class="table table-sm table-hover table-bordered table-striped ">
+                                <table class="table table-sm table-hover table-bordered table-striped ">
                                     <thead>
                                         <tr class="text-nowrap" style="font-weight: 500 !important; font-size: 12px;">
                                             <th scope="col">Date</th>
@@ -419,18 +487,20 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="openPosition" role="tabpanel" aria-labelledby="open-position-tab">
+                        <div class="tab-pane fade" id="openPosition" role="tabpanel"
+                            aria-labelledby="open-position-tab">
                             <p class="text-center text-muted">Content for Open Position will go here.</p>
                         </div>
-                        <div class="tab-pane fade" id="transactionHistory" role="tabpanel" aria-labelledby="transaction-history-tab">
+                        <div class="tab-pane fade" id="transactionHistory" role="tabpanel"
+                            aria-labelledby="transaction-history-tab">
                             <p class="text-center text-muted">Content for Transaction History will go here.</p>
                         </div>
                     </div>
                 </div>
-                 <!--history details  -->
-                
+                <!--history details  -->
+
             </div>
-       </section>
+        </section>
     </main>
 
     <!-- bottom navbar -->
@@ -440,7 +510,10 @@
                 <li class="nav__item ">
                     <a href="index-mobile.html" class="nav__item-link">
                         <div class="nav__item-icon">
-                            <i class="bi bi-house-door-fill"></i>
+                            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10A1 1 0 0 0 3 14h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669zM12 16a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
                         </div>
                         <span class="nav__item-text">Home</span>
                     </a>
@@ -448,7 +521,19 @@
                 <li class="nav__item ">
                     <a href="market-mobile.html" class="nav__item-link">
                         <div class="nav__item-icon">
-                            <i class="bi bi-bar-chart-fill"></i>
+                            <svg height="48px" version="1.1" viewBox="0 0 48 48" width="48px"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title />
+                                <desc />
+                                <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+                                    <g id="Artboard-Copy" transform="translate(-47.000000, -129.000000)">
+                                        <path
+                                            d="M57.9995,149.9995 C56.8965,149.9995 56.0005,150.8955 56.0005,152.0005 L56.0005,165.9995 C56.0005,167.1045 56.8965,168.0005 57.9995,168.0005 L61.9995,168.0005 C63.1045,168.0005 64.0005,167.1045 64.0005,165.9995 L64.0005,152.0005 C64.0005,150.8955 63.1045,149.9995 61.9995,149.9995 L57.9995,149.9995 Z M69.0005,133.9995 C67.8955,133.9995 66.9995,134.8955 66.9995,136.0005 L66.9995,165.9995 C66.9995,167.1045 67.8955,168.0005 69.0005,168.0005 L72.9995,168.0005 C74.1035,168.0005 74.9995,167.1045 74.9995,165.9995 L74.9995,136.0005 C74.9995,134.8955 74.1035,133.9995 72.9995,133.9995 L69.0005,133.9995 Z M80.0005,141.9995 C78.8955,141.9995 77.9995,142.8955 77.9995,144.0005 L77.9995,165.9995 C77.9995,167.1045 78.8955,168.0005 80.0005,168.0005 L84.0005,168.0005 C85.1035,168.0005 85.9995,167.1045 85.9995,165.9995 L85.9995,144.0005 C85.9995,142.8955 85.1035,141.9995 84.0005,141.9995 L80.0005,141.9995 Z"
+                                            fill="#000000" id="chart1" />
+                                        <g id="slices" transform="translate(47.000000, 9.000000)" />
+                                    </g>
+                                </g>
+                            </svg>
                         </div>
                         <span class="nav__item-text">Market</span>
                     </a>
@@ -456,19 +541,22 @@
                 <li class="nav__item active">
                     <a href="features-mobile.html" class="nav__item-link">
                         <div class="nav__item-icon">
-                            <i class="bi bi-pie-chart-fill"></i>
+                            <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title />
+                                <desc />
+                                <g fill="none" fill-rule="evenodd" id="Action-/-41---Action,-cycle,-refresh,-turn-icon"
+                                    stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+                                    <path
+                                        d="M2.081147,5.50003792 L14.5654408,5.50003792 C15.0382217,5.50000188 22,5 22,11.5073663 M7.582755,9.5 L2.082755,5.5 L7.582755,1.5 M21.9188532,18.5024538 L10.4345592,18.5024538 C9.96177834,18.5024899 2,19.0024918 2,12.4951255 M16.5,14.5024918 L22,18.5024918 L16.5,22.5024918"
+                                        id="Path" stroke="#000000" stroke-width="2" />
+                                </g>
+                            </svg>
                         </div>
                         <span class="nav__item-text">Trade</span>
                     </a>
                 </li>
-                <li class="nav__item">
-                    <a href="news-mobile.html" class="nav__item-link">
-                        <div class="nav__item-icon">
-                            <i class="bi bi-newspaper"></i>
-                        </div>
-                        <span class="nav__item-text">News</span>
-                    </a>
-                </li>
+
                 <li class="nav__item">
                     <a href="login.html" class="nav__item-link">
                         <div class="nav__item-icon">
@@ -480,7 +568,13 @@
                 <li class="nav__item">
                     <a href="login.html" class="nav__item-link">
                         <div class="nav__item-icon">
-                            <i class="bi bi-credit-card"></i>
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M22 10v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10h20zm0-2H2V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v4zm-7 8v2h4v-2h-4z" />
+                                </g>
+                            </svg>
                         </div>
                         <span class="nav__item-text">Assets</span>
                     </a>

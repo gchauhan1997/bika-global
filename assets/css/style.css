@@ -156,12 +156,13 @@ a {
 
 /* login page  */
 .register-page-conatiner .register-left,
-.login-page .login-left{
+.login-page .login-left {
     background: url(../img/bg-img.png) no-repeat center center;
     background-size: cover;
     background-position: center center;
-    
+
 }
+
 /* login page  */
 
 .academy-banner {
@@ -176,3 +177,78 @@ footer {
     background-size: cover;
 }
 
+
+/* sukhvir css */
+.position-relative {
+    background: url(../img/for-mobile/XK.png) no-repeat 50%;
+    background-color: #011e3e;
+    background-size: cover;
+    padding-top: 35px;
+}
+
+.banner_img img.img-fluid {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+a.navbar-brand,
+.custom-toggler {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(75deg) brightness(112%) contrast(101%);
+    zoom: 0.8;
+}
+
+.custom_navbar .navbar-collapse {
+    margin: 0 -15px;
+    padding: 10px 20px;
+    top: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.fs-7 {
+    font-size: 12px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+nav.bottom-nav ul li.nav__item svg {
+    width: 25px;
+    height: 25px;
+}
+
+nav.bottom-nav ul li.nav__item i {
+    font-size: 25px;
+}
+
+body.mobile-body.scrolled nav.custom_navbar {
+    background: #fff !important;
+}
+
+body.mobile-body.scrolled a.navbar-brand,
+body.mobile-body.scrolled .custom-toggler {
+    filter: unset;
+}
+
+li.nav__item.sub_active span.nav__item-text {
+    transform: scale(1);
+    bottom: -6px;
+    color: #000;
+}
+
+.custom_navbar .connect_btn {
+    font-size: 12px;
+    padding: 2px 7px;
+}
+
+.custom_navbar span.navbar-toggler-icon {
+    background-image: unset;
+}
+
+.custom_navbar span.navbar-toggler-icon svg {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+}
