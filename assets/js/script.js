@@ -85,17 +85,19 @@ const swiperVertical = new Swiper('.swiper-container-vertical', {
 });
 
 // bottom navbar
-document.addEventListener('DOMContentLoaded', function () {
-    const navItems = document.querySelectorAll('.nav__item');
+// js for bottom navigation
 
-    navItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            navItems.forEach(function (navItem) {
-                navItem.classList.remove('sub_active');
-            });
-            this.classList.add('active');
-        });
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".nav__item");
+
+  navItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      navItems.forEach(function (el) {
+        el.classList.remove("active");
+      });
+      this.classList.add("active");
     });
+  });
 });
 
 
